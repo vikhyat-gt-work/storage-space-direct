@@ -26,6 +26,12 @@
         "adminPassword": {
             "type": "securestring"
         },
+        "vmUsername": {
+            "type": "string"
+        },
+        "vmPassword": {
+            "type": "securestring"
+        },
         "imagePublisher": {
             "type": "string"
         },
@@ -101,8 +107,8 @@
                 },
                 "osProfile": {
                     "computerName": "[parameters('vmName')]",
-                    "adminUsername": "[parameters('adminUsername')]",
-                    "adminPassword": "[parameters('adminPassword')]"
+                    "adminUsername": "[parameters('vmUsername')]",
+                    "adminPassword": "[parameters('vmPassword')]"
                 },
                 "storageProfile": {
                     "imageReference": {
