@@ -113,7 +113,7 @@
     },
     "imageSKU": {
       "type": "string",
-      "defaultValue": "2019-Datacenter"
+      "defaultValue": "2016-Datacenter"
     },
     "imageVersion": {
       "type": "string",
