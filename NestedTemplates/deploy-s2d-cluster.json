@@ -29,19 +29,6 @@
         "description": "Password for the Administrator account of the existing Active Directory Domain"
       }
     },
-	"vmUsername": {
-      "type": "string",
-      "metadata": {
-        "description": "Name of the Administrator of the existing Active Directory Domain"
-      }
-    },
-    "vmPassword": {
-      "type": "securestring",
-      "minLength": 12,
-      "metadata": {
-        "description": "Password for the Administrator account of the existing Active Directory Domain"
-      }
-    },
     
     "storageAccountType": {
       "type": "string",
@@ -70,7 +57,7 @@
     "vmCount": {
       "type": "int",
       "minValue": 2,
-      "maxValue": 4,
+      "maxValue": 8,
       "metadata": {
         "description": "Number of S2D VMs to be created in cluster (Min=2, Max=3)"
       }
@@ -113,7 +100,7 @@
     },
     "imageSKU": {
       "type": "string",
-      "defaultValue": "2019-Datacenter"
+      "defaultValue": "2016-Datacenter"
     },
     "imageVersion": {
       "type": "string",
@@ -252,12 +239,6 @@
             "value": "[parameters('adminPassword')]"
           },
 		
-          "vmUsername": {
-            "value": "[parameters('vmUsername')]"
-          },
-          "vmPassword": {
-            "value": "[parameters('vmPassword')]"
-          },
           "_artifactsLocation": {
             "value": "[parameters('_artifactsLocation')]"
           },
