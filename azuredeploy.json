@@ -28,7 +28,7 @@
       "metadata": {
         "description": "Size of the S2D VMs to be created"
       },
-      "defaultValue": "Standard_D2S_v2"
+      "defaultValue": "Standard_DS2_v2"
     },
     "vmCount": {
       "type": "int",
@@ -61,7 +61,8 @@
       "type": "string",
       "metadata": {
         "description": "DNS domain name for existing Active Directory domain"
-      }
+      },
+      "defaultValue": "gtca.local"
     },
     "adminUsername": {
       "type": "string",
@@ -74,19 +75,6 @@
       "minLength": 12,
       "metadata": {
         "description": "Password for the Administrator account of the existing Active Directory Domain"
-      }
-    },
-    "vmUsername": {
-      "type": "string",
-      "metadata": {
-        "description": "Name of the VM Administrator"
-      }
-    },
-    "vmPassword": {
-      "type": "securestring",
-      "minLength": 12,
-      "metadata": {
-        "description": "Password for the VM Administrator"
       }
     },
     "existingVirtualNetworkRGName": {
@@ -165,12 +153,6 @@
           },
           "adminPassword": {
             "value": "[parameters('adminPassword')]"
-          },
-          "vmUsername": {
-            "value": "[parameters('vmUsername')]"
-          },
-          "vmPassword": {
-            "value": "[parameters('vmPassword')]"
           },
           "storageAccountType": {
             "value": "[parameters('storageAccountType')]"
